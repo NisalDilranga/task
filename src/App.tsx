@@ -8,7 +8,7 @@ function App() {
   
 
   return (
-    <div className=" px-12 py-8">
+    <div className=" lg:px-12 lg:py-8 px-1 py-2">
  <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />

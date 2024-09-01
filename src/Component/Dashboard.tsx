@@ -109,7 +109,7 @@ const Dashboard = () => {
               </button>
             </div>
             <hr />
-            <div className="flex flex-wrap justify-between mt-2 text-[10px] md:text-sm lg:text-base">
+            <div className="flex flex-wrap justify-between mt-2 text-[10px] md:text-sm lg:text-base mr-10" >
               <div className="flex items-center gap-2 mb-2 md:mb-0">
                 <img src={img} className="w-4 h-4 md:w-6 md:h-6" alt="" />
                 <div>

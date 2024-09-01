@@ -63,16 +63,16 @@ const Dashboard = () => {
 
   return (
     <div className="p-4">
-      <div className="font-semibold text-xl md:text-2xl lg:text-3xl">
+      <div className="text-xl font-semibold md:text-2xl lg:text-3xl">
         <h1>Service Apartments</h1>
       </div>
 
       {properties.map((property) => (
         <div
           key={property.id}
-          className="bg-white mb-6 rounded-md flex flex-col md:flex-row gap-2 p-4 shadow-lg"
+          className="flex flex-col gap-2 p-4 mb-6 bg-white rounded-md shadow-lg md:flex-row"
         >
-          <div className="mb-4 md:mb-0">
+          <div className="mb-4 ml-5 md:mb-0">
             <img
               className="w-[250px] md:w-[150px] lg:w-[250px] h-[200px] md:h-[150px] lg:h-[200px] object-cover rounded-md items-center"
               src={property.website_image}
@@ -80,22 +80,22 @@ const Dashboard = () => {
             />
           </div>
           <div className="flex flex-col justify-between flex-1">
-            <div className="flex justify-between items-center mb-2">
+            <div className="flex items-center justify-between mb-2">
               <div>
-                <h1 className="text-base md:text-lg lg:text-2xl font-bold">
+                <h1 className="text-base font-bold md:text-lg lg:text-2xl">
                   {property.property_name}
                 </h1>
-                <p className="text-gray-600 text-xs md:text-sm lg:text-base">
+                <p className="text-xs text-gray-600 md:text-sm lg:text-base">
                   Property code: {property.property_code}
                 </p>
               </div>
               <div>
-                <h1 className="text-purple-800 font-bold text-xs md:text-lg lg:text-xl">
+                <h1 className="font-bold text-purple-800 text-[10px] md:text-lg lg:text-lg mb-4">
                   USD {property.price}
                 </h1>
               </div>
             </div>
-            <div className="flex justify-between items-center text-xs md:text-sm lg:text-base mb-2">
+            <div className="flex items-center justify-between mb-2 text-[10px] md:text-sm lg:text-base">
               <p>
                 Check in: <b>{property.check_in}</b>
               </p>
@@ -104,12 +104,12 @@ const Dashboard = () => {
               </p>
               <button
                 onClick={handleSelect}
-                className="bg-orange-500 text-white px-2 py-1 md:px-4 md:py-2 rounded-md text-xs md:text-sm"
+                className="px-4 py-1 text-xs text-white bg-orange-500 rounded-md md:px-4 md:py-2 md:text-sm"
               >
                 Select
               </button>
             </div>
-            <hr  className="border-gray border"/>
+            <hr  className="border border-gray"/>
             <div className="flex flex-wrap justify-between mt-2 text-[8px] md:text-sm lg:text-base mr-10" >
               <div className="flex items-center gap-2 mb-2 md:mb-0">
                 <img src={img} className="w-3 h-3 md:w-6 md:h-6" alt="" />

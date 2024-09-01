@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import toast  from 'react-hot-toast';
 
 const Login = () => {
     const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
+ 
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,10 +25,13 @@ const Login = () => {
         localStorage.setItem('token', response.data.data.accessToken);
         localStorage.setItem('role', response.data.data.role.toString());
         localStorage.setItem('userId', response.data.data.userId.toString());
-
-      
+        
+       
+        toast.success('Successfully login!')
         navigate('/dashboard'); 
       } else {
+        
+        toast.error(' Loging UnSuccessfully ')
         setError('Login failed. Please check your credentials.');
       }
     } catch (error) {
@@ -34,17 +39,17 @@ const Login = () => {
     }
   };
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
     <form
       onSubmit={handleLogin}
-      className="w-full max-w-sm bg-white p-8 rounded-lg shadow-md"
+      className="w-full max-w-sm p-8 bg-white rounded-lg shadow-md"
     >
-      <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+      <h2 className="mb-6 text-2xl font-bold text-center">Login</h2>
       {error && (
-        <p className="text-red-500 text-center mb-4">{error}</p>
+        <p className="mb-4 text-center text-red-500">{error}</p>
       )}
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
+        <label className="block mb-2 text-sm font-bold text-gray-700">
           Email:
         </label>
         <input
@@ -56,7 +61,7 @@ const Login = () => {
         />
       </div>
       <div className="mb-6">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
+        <label className="block mb-2 text-sm font-bold text-gray-700">
           Password:
         </label>
         <input
@@ -69,7 +74,7 @@ const Login = () => {
       </div>
       <button
         type="submit"
-        className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+        className="w-full px-4 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
       >
         Login
       </button>

@@ -109,44 +109,44 @@ const Dashboard = () => {
               </button>
             </div>
             <hr />
-            <div className="flex flex-wrap justify-between mt-2 text-[10px] md:text-sm lg:text-base mr-10" >
+            <div className="flex flex-wrap justify-between mt-2 text-[8px] md:text-sm lg:text-base mr-10" >
               <div className="flex items-center gap-2 mb-2 md:mb-0">
-                <img src={img} className="w-4 h-4 md:w-6 md:h-6" alt="" />
+                <img src={img} className="w-3 h-3 md:w-6 md:h-6" alt="" />
                 <div>
                   <h1>Bedrooms</h1>
                   <p>{property.bedrooms}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 mb-2 md:mb-0">
-                <img src={img1} className="w-4 h-4 md:w-6 md:h-6" alt="" />
+                <img src={img1} className="w-3 h-3 md:w-6 md:h-6" alt="" />
                 <div>
                   <h1>Nights</h1>
                   <p>{property.bathrooms}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 mb-2 md:mb-0">
-                <img src={img2} className="w-4 h-4 md:w-6 md:h-6" alt="" />
+                <img src={img2} className="w-3 h-3 md:w-6 md:h-6" alt="" />
                 <div>
                   <h1>children</h1>
                   <p>{property.parking}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 mb-2 md:mb-0">
-                <img src={img3} className="w-4 h-4 md:w-6 md:h-6" alt="" />
+                <img src={img3} className="w-3 h-3 md:w-6 md:h-6" alt="" />
                 <div>
                   <h1>parkin</h1>
                   <p>{property.adults} </p>
                 </div>
               </div>
               <div className="flex items-center gap-2 mb-2 md:mb-0">
-                <img src={img4} className="w-4 h-4 md:w-6 md:h-6" alt="" />
+                <img src={img4} className="w-3 h-3 md:w-6 md:h-6" alt="" />
                 <div>
                   <h1>pet</h1>
                   <p>{property.pet}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <img src={img5} className="w-4 h-4 md:w-6 md:h-6" alt="" />
+                <img src={img5} className="w-3 h-3 md:w-6 md:h-6" alt="" />
                 <div>
                   <h1>Adults</h1>
                   <p>{property.adults}</p>

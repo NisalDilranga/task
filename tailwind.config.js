@@ -12,7 +12,7 @@ export default {
         "w":"#FFFFFF",
         "dark_primary": "#06223F",
         "bg_light_primary": "#F5F9FD",
-        "gray": "#B7C5D3",
+        "gray": "#D3D3D3",
       },
     },
   },

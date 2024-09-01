@@ -6,7 +6,7 @@ const Nav = () => {
       <div className=" bordetr bottom-2 border-red-800 ">
         <img src={logo}  alt="logo-image " className="lg:w-[250px]  w-[150px]" />
       </div>
-      <hr className="border-black mt-4" />
+      <hr className="border-gray mt-4" />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "./Modal";
 
@@ -20,6 +20,7 @@ const Dashboard = () => {
 
       if (!token) {
         setError("Not Authorized. Please login first.");
+        console.log(error)
         return;
       }
 
@@ -108,7 +109,7 @@ const Dashboard = () => {
                 Select
               </button>
             </div>
-            <hr />
+            <hr  className="border-gray border"/>
             <div className="flex flex-wrap justify-between mt-2 text-[8px] md:text-sm lg:text-base mr-10" >
               <div className="flex items-center gap-2 mb-2 md:mb-0">
                 <img src={img} className="w-3 h-3 md:w-6 md:h-6" alt="" />
@@ -121,7 +122,7 @@ const Dashboard = () => {
                 <img src={img1} className="w-3 h-3 md:w-6 md:h-6" alt="" />
                 <div>
                   <h1>Nights</h1>
-                  <p>{property.bathrooms}</p>
+                  <p>{property.bedrooms}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 mb-2 md:mb-0">
@@ -142,7 +143,7 @@ const Dashboard = () => {
                 <img src={img4} className="w-3 h-3 md:w-6 md:h-6" alt="" />
                 <div>
                   <h1>pet</h1>
-                  <p>{property.pet}</p>
+                  <p>{property.bedrooms}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">

@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null); // Clear previous error
+    setError(null); 
 
     try {
       const response = await axios.post('https://skill-test.similater.website/api/v1/user/login', {
@@ -19,13 +19,13 @@ const Login = () => {
       });
 
       if (response.data.status && response.data.code === '200') {
-        // Save token and other data as needed
+       
         localStorage.setItem('token', response.data.data.accessToken);
         localStorage.setItem('role', response.data.data.role.toString());
         localStorage.setItem('userId', response.data.data.userId.toString());
 
-        // Redirect to another page
-        navigate('/dashboard'); // Change '/dashboard' to your desired route
+      
+        navigate('/dashboard'); 
       } else {
         setError('Login failed. Please check your credentials.');
       }
